@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.b1342cd2.css","mappings":"AAAA,OAII,aAAc,CAEd,0BAA8B,CAJ9B,SAAU,CADV,iBAAkB,CAIlB,iBAAkB,CAFlB,KAIJ","sources":["App.css"],"sourcesContent":[".Title {\r\n    position: absolute;\r\n    left: 10vw;\r\n    top: 0;\r\n    color: #3b3b3b;\r\n    text-align: center;\r\n    font-family: \"Garamond\", Serif;\r\n}"],"names":[],"sourceRoot":""}
