@@ -1,9 +1,11 @@
 import ThreeScene from "./components/ThreeScene";
 // Components
-import Sphere from "./components/Sphere";
 import Camera from "./components/Camera";
-// Three.js
+import Texture from "./components/Texture";
+// Controls
 import { MapControls } from '@react-three/drei'
+// React
+import { Suspense } from "react";
 // CSS
 import './App.css'
 
@@ -14,10 +16,12 @@ const App = () => {
       <ThreeScene>
         <Camera />
         <color attach='background' args={['#fdfbef']}/>
-        <Sphere color='#f00' position={[-3,0,0]} rotation={Math.PI/4}/>
-        <Sphere color='#0f0' position={[0,0,0]} rotation={Math.PI/4}/>
-        <Sphere color='#00f' position={[3,0,0]} rotation={Math.PI/4}/>
-        <ambientLight />
+        <Suspense>
+          <Texture position={[0,0,-5]} num='13'/>
+          <Texture position={[-2,0,-1]} num='17'/>
+          <Texture position={[1,-.16,1]} num='12'/>
+          <Texture position={[-0.7,0,5]} num='14'/>
+        </Suspense>
         <MapControls />
       </ThreeScene>
     </div>
