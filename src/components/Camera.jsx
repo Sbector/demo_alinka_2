@@ -6,7 +6,7 @@ const Camera = () => {
   return (
     <PerspectiveCamera 
         makeDefault
-        position={[0, .15, 10]}
+        position={[0, 5, 0]}
         fov = {55}
         near = {.35}
     />

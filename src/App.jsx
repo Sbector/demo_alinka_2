@@ -1,9 +1,9 @@
 import ThreeScene from "./components/ThreeScene";
 // Components
 import Camera from "./components/Camera";
-import Texture from "./components/Texture";
+import Peregrino from "./components/Peregrino";
 // Controls
-import { MapControls } from '@react-three/drei'
+import { MapControls, Stats } from '@react-three/drei'
 // React
 import { Suspense } from "react";
 // CSS
@@ -14,16 +14,23 @@ const App = () => {
   return (
     <div style={{ height: '100vh', overflow:'hidden' }}>
       <ThreeScene>
+        <Stats />
         <Camera />
         <color attach='background' args={['#fdfbef']}/>
         <Suspense>
-          <Texture position={[0,0,-5]} num='13'/>
-          <Texture position={[-2,0,-1]} num='17'/>
-          <Texture position={[1,-.16,1]} num='12'/>
-          <Texture position={[-0.7,0,5]} num='14'/>
+          <Peregrino position={[-1,0,-.8]} num='13'/>
+          <Peregrino position={[0,0,-.8]} num='17'/>
+          <Peregrino position={[1,0,-.8]} num='12'/>
+          <Peregrino position={[-1,0,1]} num='14'/>
+          <Peregrino position={[0,0,1]} num='7'/>
+          <Peregrino position={[1,0,1]} num='50'/>
         </Suspense>
         <MapControls />
       </ThreeScene>
+      <div className="Title">
+        <h1>Road to Tepeyac (demo)</h1>
+        <h2>Alinka Echeverría</h2>
+      </div>
     </div>
   );
 }
