@@ -5,11 +5,11 @@ import { useLoader } from '@react-three/fiber'
 
 const Peregrino = ({ position, num}) => {
 
-  const texture = useLoader(TextureLoader, `./png/tepeyac (${num}).png`)
+  const texture = useLoader(TextureLoader, `./img//tepeyac (${num}).jpg`)
   return (
     <mesh position={position} rotation={[-Math.PI / 2, 0, 0]} >
-        <planeGeometry args={[.77,1]}/>
-        <meshBasicMaterial map={ texture } transparent='true'/>
+        <planeGeometry args={[.75,1]} />
+        <meshBasicMaterial map={ texture } transparent/>
     </mesh>
   )
 }
