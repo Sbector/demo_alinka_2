@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/demo_alinka_2/static/css/main.9636633d.css",
-    "main.js": "/demo_alinka_2/static/js/main.c4f5c374.js",
+    "main.js": "/demo_alinka_2/static/js/main.cf942656.js",
     "index.html": "/demo_alinka_2/index.html",
     "main.9636633d.css.map": "/demo_alinka_2/static/css/main.9636633d.css.map",
-    "main.c4f5c374.js.map": "/demo_alinka_2/static/js/main.c4f5c374.js.map"
+    "main.cf942656.js.map": "/demo_alinka_2/static/js/main.cf942656.js.map"
   },
   "entrypoints": [
     "static/css/main.9636633d.css",
-    "static/js/main.c4f5c374.js"
+    "static/js/main.cf942656.js"
   ]
 }
