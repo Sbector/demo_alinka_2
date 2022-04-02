@@ -8,7 +8,6 @@ import { Canvas } from '@react-three/fiber'
 const ThreeScene = ({ children }) => {
   return (
     <Canvas
-     flat
     >{children}</Canvas>
   )
 }

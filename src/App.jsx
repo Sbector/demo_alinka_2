@@ -20,8 +20,8 @@ const App = () => {
         <Camera />
         <color attach='background' args={['#fff']}/>
         <Suspense>
-          <Peregrino position={[-1,0,-.2]} num='13'/>
-          <Peregrino position={[0,0,-.2]} num='14'/>
+          <Peregrino position={[-1,0,-.2]} num='2'/>
+          <Peregrino position={[0,0,-.2]} num='1'/>
           <Peregrino position={[1,0,-.2]} num='12'/>
           <Peregrino position={[-1,0,1]} num='41'/>
           <Peregrino position={[0,0,1]} num='7'/>
