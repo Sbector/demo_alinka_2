@@ -13,6 +13,15 @@ import './App.css'
 
 
 const App = () => {
+  const numeros = []
+  const suma = () => {
+    for(let i = 1; i<73; i ++){
+      numeros.push(i)
+    }
+  }
+  suma()
+  console.log(numeros)
+
   return (
     <div style={{ height: '100vh', overflow:'hidden' }}>
       <ThreeScene>
@@ -20,12 +29,15 @@ const App = () => {
         <Camera />
         <color attach='background' args={['#fff']}/>
         <Suspense>
-          <Peregrino position={[-1,0,-.2]} num='2'/>
-          <Peregrino position={[0,0,-.2]} num='1'/>
-          <Peregrino position={[1,0,-.2]} num='12'/>
-          <Peregrino position={[-1,0,1]} num='41'/>
-          <Peregrino position={[0,0,1]} num='7'/>
-          <Peregrino position={[1,0,1]} num='50'/>
+          {
+            numeros.map((numero)=> {
+              const id = numero
+              return(
+              <Peregrino position={[id-36.5,0,-.2]} num={id}/>
+              )
+            })
+          }
+          
         </Suspense>
         <Controls />
       </ThreeScene>
