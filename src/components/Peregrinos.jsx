@@ -3,28 +3,41 @@ import { Suspense } from "react";
 import Peregrino from './Peregrino';
 
 const Peregrinos = () => {
-  const total = 70
-  const numbers = [{}]
-
-  const pos = [{
-    posX: '0',
-    posY: '0',
-    posZ: '0',
-  }]
+  const total = 72
+  const numbers = []
+  const pos = []
+  let j = 0
+  let k = 0
   
   for(let i = 0; i < total; i++){
     numbers.push({})
     numbers[i].num = i+1
     numbers[i].key = i
+    
+    k++
+    if(i % 11 == 0){
+      j += 1.25
+      k = 0
+    }
     pos.push({})
-    pos[i].posX = 0
+    pos[i].posX = k-5
+    pos[i].posY = 0
+    pos[i].posZ = j-3
   }
   
-  const number = {...pos[0], ...numbers[total-1]}
   return (
-    <Suspense> 
-        <Peregrino {...number}/>  
-    </Suspense>
+    <>
+    {   
+      numbers.map((item)=> {
+          const pere = {...pos[item.key], ...numbers[item.key]}
+          console.log(pere)
+          return (
+            <Peregrino {...pere} />
+          )
+        }
+      )
+    }
+   </>
   )
 }
 

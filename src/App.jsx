@@ -21,11 +21,12 @@ const App = () => {
         <Stats />
         <Camera />
         <Suspense>
-        <Peregrinos/>
+        <Peregrinos />
         </Suspense>
         <Controls />   
+        <Loader/>
       </ThreeScene>
-      <Loader/>
+      
       <div className="Title">
         <h1>Road to Tepeyac (demo)</h1>
         <h2>Alinka Echeverría</h2>

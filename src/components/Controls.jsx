@@ -7,7 +7,7 @@ const Controls = () => {
     <MapControls 
       enableRotate={false}
       minDistance={.36}
-      maxDistance={3}
+      maxDistance={30}
     />
   )
 }
